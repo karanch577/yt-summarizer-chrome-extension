@@ -69,7 +69,7 @@ const observer = new MutationObserver((mutations) => {
 
           const videoId = new URL(window.location.href).searchParams.get('v');
           try {
-            const res = await fetch(`http://localhost:4000/api/summary?videoId=${videoId}`);
+            const res = await fetch(`https://yt-summarizer-backend-production.up.railway.app/api/summary?videoId=${videoId}`);
 
             if (!res.ok) {
               throw new Error("Failed to fetch summary");
